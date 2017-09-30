@@ -39,7 +39,7 @@ You can even use your own button, like an HTML default button or using your styl
 
 _1. Adding the Facebook SDK_  
 First thing to do is load the JavaScript Facebook SDK.  
-```
+```javascript
 // Loading dinamically the Facebook SDK
 (function(d, s, id){
   var js, fjs = d.getElementsByTagName(s)[0];
@@ -54,7 +54,7 @@ This piece of code will add a script dinamically in your web page and will load 
 _2. initialize_  
 
 Now, let's initialize the Facebook SDK:  
-```
+```javascript
 window.fbAsyncInit = function() {
     FB.init({
       appId : 'YOUR_APP_ID',
@@ -70,13 +70,13 @@ Below, on the "Getting your APP ID" section, you can check how to get one if you
 _3. Create your button_  
 As said before, you can have your own Facebook login button.  
 Let's implement a simple standard HTML button:  
-```
+```html
 <button id="fb-login" onclick="fbLogin();" class="your_cool_style">Facebook Login</button>
 ```
 Include the `fb-login` button in your application, and then implement the login function.  
 
 _4. The login function_  
-```
+```javascript
 FB.login(function(response) {
   if (response.status === 'connected') {
     // Logged into your app and Facebook.
@@ -87,7 +87,7 @@ FB.login(function(response) {
 ```
 _5. Logout_  
 For logout, you can use the `logout` method available on the API.  
-```
+```javascript
 FB.logout((response) => {
     console.log(response)
 });
@@ -99,14 +99,14 @@ It's reliable, easy to use and gives you a choice about how you sign up for apps
 Let's see hot to implement it using the JavaScript SDK.  
 
 _1. Include the SDK in your application_  
-```
+```html
 <!-- HTTPS required. HTTP will give a 403 forbidden response -->
 <script src="https://sdk.accountkit.com/en_US/sdk.js"></script>
 ```
 PS: You can use the same approach we used in the login button example, adding the script dinamically.  
 
 2. Create email and phone fields
-```
+```html
 <input value="+1" id="country_code" />
 <input placeholder="phone number" id="phone_number"/>
 <button onclick="smsLogin();">Login via SMS</button>
@@ -116,7 +116,7 @@ PS: You can use the same approach we used in the login button example, adding th
     
 ```
 _3. initialize_  
-```
+```javascript
 AccountKit_OnInteractive = function(){
 AccountKit.init({
     appId:"{{FACEBOOK_APP_ID}}", 
@@ -131,7 +131,7 @@ AccountKit.init({
 _4. Login_  
 Both with phone and email, you should call the `login` method available on the AccountKit API.  
 For example, for the email login:  
-```
+```javascript
 // email form submission handler
 function emailLogin() {
   var emailAddress = document.getElementById("email").value;
@@ -144,7 +144,7 @@ function emailLogin() {
 ```
 
 Sms login:  
-```
+```javascript
 function smsLogin() {
   var countryCode = document.getElementById("country_code").value;
   var phoneNumber = document.getElementById("phone_number").value;
@@ -156,7 +156,7 @@ function smsLogin() {
 }
 ```
 Now you just need to implement the `loginCallback` function, which will handle the email and sms login:  
-```
+```javascript
 function loginCallback(response) {
   if (response.status === "PARTIALLY_AUTHENTICATED") {
       var code = response.code;

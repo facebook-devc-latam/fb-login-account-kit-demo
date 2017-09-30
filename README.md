@@ -1,8 +1,8 @@
 # Facebook Login + Account Kit using the JavaScript SDK and Graph API
 
-Disclaimer: This is a working progress demo being developed by the global Facebook Developer Circles leads LATAM.  
+__Disclaimer: This is a working progress demo being developed by the global Facebook Developer Circles leads LATAM.  
 The main focus here is prototype with actual code to learn all caveats about Facebook Login and Account Kit API for a better understanding.  
-This material will be used in the new workshops Facebook Developer Circles is promoting across communities.  
+This material will be used in the new workshops Facebook Developer Circles is promoting across communities.__  
 
 ## Facebook login button
 There are several ways we can implement the Facebook login Button.  
@@ -155,4 +155,4 @@ Go to [https://developers.facebook.com/](https://developers.facebook.com/) and c
 ![](img/new-app.png)  
 
 You should see all Facebook products in the next screen:  
-![](fb-products.png)  
+![](img/fb-products.png)  

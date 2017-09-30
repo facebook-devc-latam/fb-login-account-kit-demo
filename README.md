@@ -1,3 +1,20 @@
+# Demo  
+This repository contains the prototype demo exploring the Login and Account Kit API.  
+You can test it by running the HTML index in your local server.  
+If you're using Node.js, you cam instal the `http-server` package and then:  
+```
+cd fb-login-account-kit-demo
+http-server
+```
+Then you just open `localhost:8080` in your browser.  
+
+![](img/email.png)
+
+![](img/sms.png)
+
+![](img/fb-login.png)
+
+
 # Facebook Login + Account Kit using the JavaScript SDK and Graph API
 
 __Disclaimer: This is a working progress demo being developed by the global Facebook Developer Circles leads LATAM.  

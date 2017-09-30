@@ -1,7 +1,12 @@
 # Demo  
 This repository contains the prototype demo exploring the Login and Account Kit API.  
 You can test it by running the HTML index in your local server.  
-If you're using Node.js, you cam instal the `http-server` package and then:  
+If you're using Node.js, you cam instal the `http-server` package:  
+```
+npm install http-sever -g
+```
+
+and then:  
 ```
 cd fb-login-account-kit-demo
 http-server

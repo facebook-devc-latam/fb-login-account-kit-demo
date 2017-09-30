@@ -1,3 +1,9 @@
+# Facebook Login + Account Kit using the JavaScript SDK and Graph API
+
+*Disclaimer: This is a working progress demo being developed by the global Facebook Developer Circles leads LATAM.  
+The main focus here is prototype with actual code to learn all caveats about Facebook Login and Account Kit API for a better understanding.  
+This material will be used in the new workshops Facebook Developer Circles is promoting across communities.*  
+
 # Demo  
 This repository contains the prototype demo exploring the Login and Account Kit API.  
 You can test it by running the HTML index in your local server.  
@@ -18,13 +24,6 @@ Then you just open `localhost:8080` in your browser.
 ![](img/sms.png)
 
 ![](img/fb-login.png)
-
-
-# Facebook Login + Account Kit using the JavaScript SDK and Graph API
-
-*Disclaimer: This is a working progress demo being developed by the global Facebook Developer Circles leads LATAM.  
-The main focus here is prototype with actual code to learn all caveats about Facebook Login and Account Kit API for a better understanding.  
-This material will be used in the new workshops Facebook Developer Circles is promoting across communities.*  
 
 ## Facebook login button
 There are several ways we can implement the Facebook login Button.  

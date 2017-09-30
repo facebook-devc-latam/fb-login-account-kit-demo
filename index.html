@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--Import Google Icon Font-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!--Import materialize.css-->
+        <link type="text/css" rel="stylesheet" href="node_modules/materialize-css/dist/css/materialize.min.css"  media="screen,projection"/>
+
+        <!--Let browser know website is optimized for mobile-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+        <!-- HTTPS required. HTTP will give a 403 forbidden response -->
+        <script src="https://sdk.accountkit.com/en_US/sdk.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col s12 m6">
+                    <div class="card #263238 blue-grey darken-4">
+                    <div class="card-content white-text">
+                        <span class="card-title">Nasc Login</span>
+                        <p>You can login by providing an email or phone number. If yo prefer, you can login with Facebook.</p>
+
+                        <ul class="collapsible" data-collapsible="accordion">
+                            <li>
+                                <div class="collapsible-header #4267b2 indigo">
+                                <i class="material-icons">email</i>
+                                Email login
+                                <span class="badge"></span></div>
+                                <div class="collapsible-body">
+                                    <p>
+                                        <div class="input-field inline">
+                                            <input id="email" type="email" class="validate">
+                                            <label for="email" data-error="Please provide a valid email" data-success="">Email</label>
+                                            <a onclick="emailLogin();" class="waves-effect waves-light btn #4267b2 indigo">Login</a>
+                                        </div>
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="collapsible-header #4267b2 indigo">
+                                <i class="material-icons">phone</i>
+                                Phone login
+                                <span class="badge"></span></div>
+                                <div class="collapsible-body">
+                                    <p>
+                                        <div class="input-field inline">
+                                            <input id="country_code" type="text" class="validate" value="+55">
+                                            <label for="country_code" data-error="Country code" data-success="">Country code</label>
+                                        </div>
+                                        <div class="input-field inline">
+                                            <input id="phone_number" type="tel" class="validate">
+                                            <label for="phone_number" data-error="Please provide a valid phone number" data-success="">Telephone</label>
+                                            <a onclick="smsLogin();" class="waves-effect waves-light btn #4267b2 indigo">Login</a>
+                                        </div>
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card-action">
+                        <!--<div scope="public_profile,email" onlogin="checkLoginState();" class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="login_with" data-show-faces="false" data-auto-logout-link="true" data-use-continue-as="true"></div>-->
+                        <a id="fb-login" onclick="fbLogin();" class="waves-effect waves-light btn #4267b2 indigo">Facebook Login</a>
+                        <div id="logged" style="color:#fff">
+                            
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="fb-root"></div>
+        <script src="index.js"></script>
+
+        <!--Import jQuery before materialize.js-->
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript" src="node_modules/materialize-css/dist/js/materialize.min.js"></script>
+    </body>
+</html>

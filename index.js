@@ -56,7 +56,7 @@ function loginCallback(response) {
   if (response.status === "PARTIALLY_AUTHENTICATED") {
       var code = response.code;
       var csrf = response.state;
-      logged.innerHTML = `<br>Welcome, you are now authenticated. <img style="width:50px;height:50px;" src='logged.png'>`;
+      logged.innerHTML = `<br>Welcome, you are now authenticated. <img style="width:50px;height:50px;" src='img/logged.png'>`;
       // Send code to server to exchange for access token
   }
   else if (response.status === "NOT_AUTHENTICATED") {
@@ -92,7 +92,7 @@ function emailLogin() {
 function fbLogout() {
   var bt = document.getElementById("fb-login");
   var logged = document.querySelector("#logged");
-  FB.logout(function(response) {
+  FB.logout((response) => {
       bt.innerHTML = 'Facebook Login';
       bt.onclick = fbLogin;
       logged.innerHTML = '';

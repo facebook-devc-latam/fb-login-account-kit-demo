@@ -173,9 +173,11 @@ function loginCallback(response) {
 
 ## Getting your APP ID
 Go to [https://developers.facebook.com/](https://developers.facebook.com/) and click on "Create a new App".  
+
 ![](img/new-app.png)  
 
 You should see all Facebook products in the next screen:  
+
 ![](img/fb-products.png)  
 
 Add the products you want to use.  
@@ -186,13 +188,15 @@ You must define a **valid OAuth redirect URIs** in the Facebook Login settings.
 In development mode you probably should add something like `localhost`.  
 For this demo we're using `localhost:8080`.  
 Keep in mind that you shuold update this when your application is ready for production, so you'll need to add the production URL as well (e.g: `mywebsitewithfacebooklogin.com`).  
+
 ![](img/fb-login-settings.png)
 
 ## Configuring Account Kit
 You must define a **valid Server Domains - Used for Web SDK** in the Facebook Account Kit settings.  
 In development mode you probably should add something like `localhost`.  
 For this demo we're using `localhost:8080`.  
-Keep in mind that you shuold update this when your application is ready for production, so you'll need to add the production URL as well (e.g: `mywebsitewithfacebooklogin.com`).  
+Keep in mind that you shuold update this when your application is ready for production, so you'll need to add the production URL as well (e.g: `mywebsitewithaccountkit.com`).  
+
 ![](img/account-kit-login.png)
 
 

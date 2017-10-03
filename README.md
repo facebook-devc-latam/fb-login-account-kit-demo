@@ -181,7 +181,7 @@ You should see all Facebook products in the next screen:
 ![](img/fb-products.png)  
 
 Add the products you want to use.  
-For this demo we're using "Facebook Login" and "Account Kit".  
+For this demo we're using **Facebook Login** and **Account Kit**.  
 
 ## Configuring Facebook Login
 You must define a **valid OAuth redirect URIs** in the Facebook Login settings.  

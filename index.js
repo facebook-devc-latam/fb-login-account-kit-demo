@@ -154,24 +154,24 @@ function getFriends() {
     {
       "fields":"id,name,picture"
     },
-    getFriendsCallback(response)
+    function getFriendsCallback(response) {
+      if ( response.data ) {
+        var friendsList = document.getElementById('friends_list');
+        document.getElementById('friends_list_node').style.display = "initial";
+        document.getElementById('friend_photos_list_node').style.display = "none";
+        document.getElementById('photos_list_node').style.display = "none";
+
+        while (friendsList.firstChild) {
+          friendsList.removeChild(friendsList.firstChild);
+        }
+
+        parseFriendsResponse(response);
+      }
+    }
   );
 }
 
-function getFriendsCallback(response) {
-  if ( response.data ) {
-    var friendsList = document.getElementById('friends_list');
-    document.getElementById('friends_list_node').style.display = "initial";
-    document.getElementById('friend_photos_list_node').style.display = "none";
-    document.getElementById('photos_list_node').style.display = "none";
 
-    while (friendsList.firstChild) {
-      friendsList.removeChild(friendsList.firstChild);
-    }
-
-    parseFriendsResponse(response);
-  }
-}
 
 function parseFriendsResponse(friendsResponse) {
   console.log("parse friends response");

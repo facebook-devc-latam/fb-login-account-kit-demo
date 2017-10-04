@@ -62,7 +62,28 @@
                         <!--<div scope="public_profile,email" onlogin="checkLoginState();" class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="login_with" data-show-faces="false" data-auto-logout-link="true" data-use-continue-as="true"></div>-->
                         <a id="fb-login" onclick="fbLogin();" class="waves-effect waves-light btn #4267b2 indigo">Facebook Login</a>
                         <div id="logged" style="color:#fff">
-                            
+
+                        </div>
+
+                        <div id="graph_demo" style="color:#fff;display:none;">
+                          <br> You can use Graph API calls when you are logged with Facebook!
+                          <a onclick="getPhotos();" class="waves-effect waves-light btn #4267b2 indigo">Get Photos</a>
+                          <a onclick="getFriends();" class="waves-effect waves-light btn #4267b2 indigo">Get Friends</a>
+                          <div id="photos_list_node" style="display:none">
+                            <br>Your Photos
+                            <ul id="photos_list">
+                            </ul>
+                          </div>
+                          <div id="friends_list_node" style="display:none">
+                            <br>Friends
+                            <ul id="friends_list">
+                            </ul>
+                          </div>
+                          <div id="friend_photos_list_node" style="display:none">
+                            <br>Friend Photos
+                            <ul id="friend_photos_list">
+                            </ul>
+                          </div>
                         </div>
                     </div>
                     </div>

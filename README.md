@@ -127,6 +127,8 @@ AccountKit.init({
     }
 );
 ```
+Note: The {{csrf}} placeholder should be replaced with a non-guessable value that should originate in the app's server and be passed to the login flow. It is returned back to the app client unchanged, and the app client can pass it back to server to verify the match with the original value.  
+know more about CSRF protection: [https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF)](https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF))  
 
 _4. Login_  
 Both with phone and email, you should call the `login` method available on the AccountKit API.  
